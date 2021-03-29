@@ -1,26 +1,27 @@
 import { Route, Switch } from "react-router-dom";
+import { DetalheConteudoComplementar } from "./DetalheConteudoComplementar";
 import { DetalheTema } from "./DetalheTema";
 import { Header } from "./Header";
 import { Tabs } from "./Tabs";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Header />
       <br />
 
-      <div style={{ width: "100%" }}>
-        <div style={{ width: "25%" }}>
+      <div className="row">
+        <div className="col">
           <Tabs />
         </div>
-        <div style={{ width: "74%", float: "right" }}>
+        <div className="col">
           <h1>Detalhe do item</h1>
           <Switch>
             <Route path="/temas/:id">
               <DetalheTema />
             </Route>
             <Route path="/conteudos-complementares/:id">
-              <h1> Detalhe Conteudo Complementar</h1>
+              <DetalheConteudoComplementar />
             </Route>
             <Route path="/trabalhos/:id">
               <h1> Detalhe Trabalhos</h1>

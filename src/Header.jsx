@@ -1,7 +1,9 @@
 export const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <nav className="navbar navbar-light bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand">Header</a>
+      </div>
+    </nav>
   );
 };
